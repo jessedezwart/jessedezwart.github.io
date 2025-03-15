@@ -18,7 +18,7 @@ const config = {
 			fallback: 'index.html' // Voor SPA-routing (optioneel)
 		}),
 		paths: {
-			base: "" // Laat leeg voor root hosting
+			base: "/docs" // Laat leeg voor root hosting
 		}
 	}
 };
