@@ -12,13 +12,9 @@ const config = {
 			$lib: 'src/lib'
 		},
 		// Gebruik adapter-static voor statische site hosting via FTP
-		adapter: adapter({
-			pages: 'build', // Output map
-			assets: 'build', // Assets output map
-			fallback: 'index.html' // Voor SPA-routing (optioneel)
-		}),
+		adapter: adapter(),
 		paths: {
-			base: "/docs" // Laat leeg voor root hosting
+			base: ''
 		}
 	}
 };

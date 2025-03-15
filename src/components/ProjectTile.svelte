@@ -7,6 +7,8 @@
   export let icon: string;
   export let path: string;
 
+  import { base } from '$app/paths';
+
   const dispatch = createEventDispatcher();
 
   function handleMouseEnter() {
@@ -19,7 +21,7 @@
 </script>
 
 <a 
-    href={`/projects/${path}`} 
+    href={`${base}/projects/${path}`} 
     class="block h-full group"
     on:mouseenter={handleMouseEnter}
     on:mouseleave={handleMouseLeave}

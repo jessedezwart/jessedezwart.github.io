@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import VisitorCounter from "$components/VisitorCounter.svelte";
     import ProjectTile from '$components/ProjectTile.svelte';
+    import { base } from '$app/paths';
 
     let hoveredTile: string | null = null;
 
@@ -11,49 +12,49 @@
             title: "Girl in Blue",
             description: "Animation of a 2D character in a 3D world",
             category: "Animation",
-            icon: "/images/gib_thumbnail.png",
+            icon: `${base}/images/gib_thumbnail.png`,
             path: "girl-in-blue",
         },
         {
             title: "Employee Journey",
             description: "Redesign of the job application process at Financieelsysteem, improving UX through team-matching and a streamlined hiring flow",
             category: "UX Design",
-            icon: "/images/ej.png",
+            icon: `${base}/images/ej.png`,
             path: "employee-journey",
         },
         {
             title: "Recharge the World",
             description: "Marketing campaign to incentivise recycling batteries",
             category: "Graphic Design",
-            icon: "/images/rtw_thumbnail.png",
+            icon: `${base}/images/rtw_thumbnail.png`,
             path: "recharge-the-world",
         },
         {
             title: "Edge of Night",
             description: "Kinetic typography animation of the song Edge of Night from The Lord of the Rings",
             category: "Animation",
-            icon: "/images/eon_thumbnail2.png",
+            icon: `${base}/images/eon_thumbnail2.png`,
             path: "edge-of-night",
         },
         {
             title: "Finish the Jam",
             description: "Sing along until the traffic is gone!",
             category: "UX Design",
-            icon: "/images/ftj_thumbnail.png",
+            icon: `${base}/images/ftj_thumbnail.png`,
             path: "finish-the-jam",
         },
         {
             title: "Puzzlewalk",
             description: "Designing an app to help the elderly with sPAV walk more",
             category: "UX Design",
-            icon: "/images/puzzle_thumbnail.jpg",
+            icon: `${base}/images/puzzle_thumbnail.jpg`,
             path: "puzzlewalk",
         },
         {
             title: "Fireball animation",
             description: "Learning fire and smoke animation in Blender",
             category: "Animation",
-            icon: "/images/fireball_thumbnail.png",
+            icon: `${base}/images/fireball_thumbnail.png`,
             path: "fireball-animation",
         }
     ];

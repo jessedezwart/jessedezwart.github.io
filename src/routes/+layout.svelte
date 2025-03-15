@@ -2,6 +2,7 @@
     import VisitorCounter from '$components/VisitorCounter.svelte';
     import { onMount } from 'svelte';
     import '../app.css';
+    import { base } from '$app/paths';
 
     let { children } = $props();
     let showEmail = $state(false);
@@ -24,7 +25,7 @@
         
         <!-- Left Side: Avatar + Name + Visitor Counter -->
         <div class="flex items-center space-x-4">
-            <img src="/images/avatar.svg" alt="Diam's Avatar" class='avatar'/>
+            <img src="{base}/images/avatar.svg" alt="Diam's Avatar" class='avatar'/>
             <div class="ml-20">
                 <h1 class="text-4xl font-bold">Diam Kanbier</h1>
                 <p class="text-lg ml-0.5">UX Designer</p>
@@ -46,7 +47,7 @@
             </p>
             <div class="socials">
                 <a href="https://www.linkedin.com/in/diam-kanbier">
-                    <img src="/images/linkedin.svg" alt="linkedin logo">
+                    <img src="{base}/images/linkedin.svg" alt="linkedin logo">
                 </a>
             </div>
         </div>

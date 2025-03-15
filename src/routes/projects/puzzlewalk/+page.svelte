@@ -1,7 +1,12 @@
+<script>
+  import { base } from '$app/paths';
+</script>
+
+
 <div class="project-page">
     <!-- Escape Hatch -->
-    <a class="back-button" href="/">
-        <img src="/images/arrow_back.svg" alt="arrow icon">
+    <a class="back-button" href={`${base}/`}>
+        <img src="{`${base}/images/arrow_back.svg`}" alt="arrow icon">
         Back to tiles
     </a>
     
