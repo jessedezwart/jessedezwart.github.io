@@ -1,0 +1,34 @@
+name: Deploy to Plesk via FTP
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Haal de code op uit GitHub
+        uses: actions/checkout@v3
+
+      - name: Installeer Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Installeer dependencies en build de site
+        run: |
+          npm install
+          npm run build
+
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+            server: 45.82.189.145  # Gebruik dit IP-adres als FTP-server
+            username: diam96  # Gebruik deze FTP-gebruikersnaam
+            password: ${{ secrets.FTP_PASSWORD }}  # Wachtwoord uit GitHub Secrets
+            local-dir: ./build/  # De gegenereerde SvelteKit build-map
+            server-dir: /httpdocs/  # Controleer of dit de juiste map is in Plesk
+
